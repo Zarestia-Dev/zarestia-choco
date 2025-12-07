@@ -37,6 +37,74 @@ Replace `rclone-manager` with the package name you want to install.
 
 After installing a package (for example, `rclone-manager`), launch the installed application from the Start menu or desktop shortcut created by the package. For package-specific usage and documentation, follow links in the package repository or upstream project documentation.
 
+## Building and Publishing
+
+### Building a Chocolatey Package
+
+To build a `.nupkg` file from a package (for example, `rclone-manager`):
+
+1. Navigate to the package directory:
+   ```powershell
+   cd rclone-manager
+   ```
+
+2. Pack the package using the Chocolatey CLI:
+   ```powershell
+   choco pack
+   ```
+
+   This will generate a `.nupkg` file (for example, `rclone-manager.0.1.8.nupkg`) in the current directory.
+
+3. **Test locally** before publishing:
+   ```powershell
+   choco install rclone-manager -source . -y
+   ```
+
+   This installs the package from the local `.nupkg` file to verify it works correctly.
+
+### Publishing to Chocolatey Community Repository
+
+To publish your package to the [Chocolatey Community Repository](https://community.chocolatey.org/):
+
+1. **Create a Chocolatey account** at https://community.chocolatey.org/account/Register if you don't have one.
+
+2. **Get your API key** from your account page at https://community.chocolatey.org/account.
+
+3. **Set your API key** (one-time setup):
+   ```powershell
+   choco apikey --key YOUR_API_KEY_HERE --source https://push.chocolatey.org/
+   ```
+
+4. **Push the package**:
+   ```powershell
+   choco push rclone-manager.0.1.8.nupkg --source https://push.chocolatey.org/
+   ```
+
+   Replace `rclone-manager.0.1.8.nupkg` with your actual package filename.
+
+5. **Wait for moderation**: Your package will be reviewed by the Chocolatey moderators. You'll receive notifications about the status via email.
+
+### Updating a Package
+
+When releasing a new version:
+
+1. Update the `<version>` in the `.nuspec` file.
+2. Update download URLs and checksums in `tools/chocolateyInstall.ps1`:
+   - Get SHA256 checksums using:
+     ```powershell
+     Get-FileHash -Path "path\to\installer.msi" -Algorithm SHA256
+     ```
+3. Update release notes and any other metadata in the `.nuspec`.
+4. Build and test locally (see steps above).
+5. Push the new version to Chocolatey.
+
+### Tips
+
+- Use `choco pack --version X.Y.Z` to override the version in the `.nuspec` if needed.
+- Always test installation, upgrade, and uninstallation locally before pushing.
+- Keep your API key secure and never commit it to the repository.
+- Follow [Chocolatey packaging guidelines](https://docs.chocolatey.org/en-us/create/create-packages) for best practices.
+
 ## Contributing
 
 Contributions are welcome. To contribute packaging or updates:
