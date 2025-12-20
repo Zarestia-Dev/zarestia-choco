@@ -11,11 +11,11 @@ $packageArgs = @{
 $procArch = Get-ProcessorBits
 
 if ($procArch -eq 64) {
-  $packageArgs.url64bit = 'https://github.com/Zarestia-Dev/rclone-manager/releases/download/v0.1.8/RClone.Manager_0.1.8_x64_en-US.msi'
-  $packageArgs.checksum64 = 'c74aad7f6031ebb5b74ab4b9fa0e7ea3836f75fe656363097dbdf50c4543da1b'
+  $packageArgs.url64bit = 'https://github.com/Zarestia-Dev/rclone-manager/releases/download/v0.1.9/RClone.Manager_0.1.9_x64_en-US.msi'
+  $packageArgs.checksum64 = 'deb52412fc717098b7d3dede211fa281847087bce2980374fb4b0bf13c3af466'
 } elseif ($procArch -eq 'arm64') {
-  $packageArgs.url64bit = 'https://github.com/Zarestia-Dev/rclone-manager/releases/download/v0.1.8/RClone.Manager_0.1.8_arm64_en-US.msi'
-  $packageArgs.checksum64 = 'a5ec3a704dc3fb6f2469112be5a0c2e953e70df800b36b11ae74f8328e45d513'
+  $packageArgs.url64bit = 'https://github.com/Zarestia-Dev/rclone-manager/releases/download/v0.1.9/RClone.Manager_0.1.9_arm64_en-US.msi'
+  $packageArgs.checksum64 = '61cd3d13b1996393de234cd9583da0115bef52f5f8e4ffae11ebd6745a079831'
 } else {
   throw "This package does not support the $($procArch) architecture."
 }
