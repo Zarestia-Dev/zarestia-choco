@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>rclone-manager</id>
-    <version>0.1.9</version>
+    <version>0.2.1</version>
     <title>RClone Manager</title>
     <authors>Zarestia-Dev</authors>
     <owners>Hakanbaban53</owners> <projectUrl>https://github.com/Zarestia-Dev/rclone-manager</projectUrl>
