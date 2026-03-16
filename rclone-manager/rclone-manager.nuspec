@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>rclone-manager</id>
-    <version>0.2.1</version>
+    <version>0.2.2</version>
     <title>RClone Manager</title>
     <authors>Zarestia-Dev</authors>
     <owners>Hakanbaban53</owners> <projectUrl>https://github.com/Zarestia-Dev/rclone-manager</projectUrl>
     <licenseUrl>https://github.com/Zarestia-Dev/rclone-manager/blob/master/LICENSE</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/Zarestia-Dev/rclone-manager/master/src-tauri/icons/icon.png</iconUrl>
-    <docsUrl>https://github.com/Zarestia-Dev/rclone-manager/wiki</docsUrl>
+    <docsUrl>https://hakanismail.info/zarestia/rclone-manager/docs/</docsUrl>
     <bugTrackerUrl>https://github.com/Zarestia-Dev/rclone-manager/issues</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A simple cross-platform GUI for rclone, the command-line program to manage files on cloud storage.</description>
