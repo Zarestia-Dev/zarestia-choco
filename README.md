@@ -53,7 +53,7 @@ To build a `.nupkg` file from a package (for example, `rclone-manager`):
    choco pack
    ```
 
-   This will generate a `.nupkg` file (for example, `rclone-manager.0.2.6.nupkg`) in the current directory.
+   This will generate a `.nupkg` file (for example, `rclone-manager.0.2.7.nupkg`) in the current directory.
 
 3. **Test locally** before publishing:
    ```powershell
@@ -77,10 +77,10 @@ To publish your package to the [Chocolatey Community Repository](https://communi
 
 4. **Push the package**:
    ```powershell
-   choco push rclone-manager.0.2.6.nupkg --source https://push.chocolatey.org/
+   choco push rclone-manager.0.2.7.nupkg --source https://push.chocolatey.org/
    ```
 
-   Replace `rclone-manager.0.2.6.nupkg` with your actual package filename.
+   Replace `rclone-manager.0.2.7.nupkg` with your actual package filename.
 
 5. **Wait for moderation**: Your package will be reviewed by the Chocolatey moderators. You'll receive notifications about the status via email.
 
