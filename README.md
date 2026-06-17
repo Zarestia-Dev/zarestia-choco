@@ -44,18 +44,21 @@ After installing a package (for example, `rclone-manager`), launch the installed
 To build a `.nupkg` file from a package (for example, `rclone-manager`):
 
 1. Navigate to the package directory:
+
    ```powershell
    cd rclone-manager
    ```
 
 2. Pack the package using the Chocolatey CLI:
+
    ```powershell
    choco pack
    ```
 
-   This will generate a `.nupkg` file (for example, `rclone-manager.0.2.7.nupkg`) in the current directory.
+   This will generate a `.nupkg` file (for example, `rclone-manager.0.2.8.nupkg`) in the current directory.
 
 3. **Test locally** before publishing:
+
    ```powershell
    choco install rclone-manager -source . -y
    ```
@@ -71,16 +74,18 @@ To publish your package to the [Chocolatey Community Repository](https://communi
 2. **Get your API key** from your account page at https://community.chocolatey.org/account.
 
 3. **Set your API key** (one-time setup):
+
    ```powershell
    choco apikey --key YOUR_API_KEY_HERE --source https://push.chocolatey.org/
    ```
 
 4. **Push the package**:
+
    ```powershell
-   choco push rclone-manager.0.2.7.nupkg --source https://push.chocolatey.org/
+   choco push rclone-manager.0.2.8.nupkg --source https://push.chocolatey.org/
    ```
 
-   Replace `rclone-manager.0.2.7.nupkg` with your actual package filename.
+   Replace `rclone-manager.0.2.8.nupkg` with your actual package filename.
 
 5. **Wait for moderation**: Your package will be reviewed by the Chocolatey moderators. You'll receive notifications about the status via email.
 
@@ -124,4 +129,3 @@ Report issues related to these Chocolatey packages on this repository's GitHub I
 ## License
 
 This Chocolatey package is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
-
